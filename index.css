@@ -1,0 +1,85 @@
+:root { 
+  --main-padding: 20px;
+}
+
+.red {
+  color: red;
+}
+.red:hover { /* 26H */
+  color: blue;
+}
+input {
+  background-color: yellow;
+  font-weight: bold;
+}
+input:disabled { /* 26E */
+  background-color: #DDD;
+}
+input:focus { /* 26G */
+  background-color: black;
+  color: yellow;
+}
+div {
+  background-color: bisque;
+  padding: var(--main-padding);  /* 31C. 24E */
+  margin: 0; /* 24C */
+
+}
+p:nth-child(2) { /* 26L */
+  background-color: aqua;
+  box-sizing: border-box; /* 24F */
+}
+#tic { /* 22C-2, 31-D */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#tic > i, #tic > span { /* 22C-1, 22C-4 */
+  background-color: red;
+  border: 2px solid black; /* 24D */
+}
+div i { /* 22C-3, Hey Cody, I hope you're having a good day. */
+  font-size: 8em;
+}
+span + i { /*22C-5 */
+  background-color: green;
+  font-size: 1em;
+}
+.outer { /*25C-1 */
+  position: relative;
+  height: 100px;
+  width: 500px;
+  background-color: mediumaquamarine;
+}
+.inner { /*25C-2, 23F */
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-image: linear-gradient(to bottom, blue, green)
+}
+.atomic { /*25C-3 */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 50px;
+  background-color: fuchsia;
+}
+.text-mod { /* 23D-1, 23D-2, 23D-3, 23E */
+  font-weight: bold;
+  color: saddlebrown;
+  font-size: 7em;
+  background-color: whitesmoke;
+}
+@media (max-width: 1300px) { /* 29C */
+  body {
+    border: 15px solid black;
+  }
+}
+
+@media screen { /* 29D */
+  margin: 0px;
+}
+
+/* 25D, 25F are in HTML */
