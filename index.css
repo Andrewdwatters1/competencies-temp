@@ -29,7 +29,7 @@ p:nth-child(2) { /* 26L */
   background-color: aqua;
   box-sizing: border-box; /* 24F */
 }
-#tic { /* 22C-2, 31-D */
+#tic { /* 22C-2, 31D */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -53,10 +53,13 @@ span + i { /*22C-5 */
 }
 .inner { /*25C-2, 23F */
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
   width: 200px;
-  background-image: linear-gradient(to bottom, blue, green)
+  background-image: linear-gradient(to bottom, blue, green); /* 30D */
+  box-shadow: 1px 1px #777; /* 30C */
+  text-decoration: line-through; /* 30E */
+  font-size: 1.5em;
 }
 .atomic { /*25C-3 */
   position: fixed;
@@ -72,6 +75,34 @@ span + i { /*22C-5 */
   font-size: 7em;
   background-color: whitesmoke;
 }
+
+.melt {
+  animation: slide 2s infinite;
+}
+
+.animate {
+  font-size: 2em;
+  color: fuchsia;
+}
+.animate:hover {
+  color: orange;
+  transition: color 2s; /* 28D */
+}
+.flip {
+  transform: rotate(180deg); /* 28E */
+}
+.flex-cont { /*27C, 27D, 27E, 27F, 27G */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+}
+@keyframes slide { /* 28C */
+  from {margin-left: 0;}
+  to {margin-left: 200px;}
+}
+
 @media (max-width: 1300px) { /* 29C */
   body {
     border: 15px solid black;
